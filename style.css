@@ -140,8 +140,8 @@ header p {
 }
 
 .timeline-content {
-  position: absolute;
-  bottom: 80px;
+  position: fixed;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
@@ -149,10 +149,9 @@ header p {
   overflow: hidden;
   opacity: 0;
   transition: width 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
-  background: white;
-  z-index: 20;
+  background: transparent;
+  z-index: 15;
   max-width: 90%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item:hover .timeline-content,
@@ -184,7 +183,6 @@ header p {
   margin-top: -750px;
   position: relative;
   z-index: 1;
-  border-radius: 4px;
 }
 
 @media (max-width: 600px) {
