@@ -64,27 +64,51 @@ header p {
   text-align: center;
 }
 
-/* The line runs down the page beside every year. */
+/* The line runs across the page for every year. */
 .timeline {
   position: relative;
-  max-width: 700px;
+  display: flex;
   margin: 0 auto;
-  padding: 12px 0;
+  padding: 0 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #005b9a #e0e0e0;
+  min-height: 250px;
+}
+
+.timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: #005b9a;
+  border-radius: 4px;
+}
+
+.timeline::-webkit-scrollbar-thumb:hover {
+  background: #003d6b;
 }
 
 .timeline::before {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 39px;
-  width: 3px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
   content: "";
   background: #8bc5e8;
+  transform: translateY(-50%);
 }
 
 .timeline-item {
   position: relative;
-  height: 150px;
+  width: 150px;
+  flex-shrink: 0;
   margin-bottom: 0;
   padding: 0;
 }
@@ -117,21 +141,22 @@ header p {
 
 .timeline-content {
   position: absolute;
-  top: 50%;
-  left: 92px;
-  transform: translateY(-50%);
+  top: 100%;
+  left: 0;
   width: 0;
   padding: 0;
+  margin-top: 8px;
   overflow: hidden;
   opacity: 0;
   transition: width 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
   background: white;
-  border-left: 3px solid #005b9a;
+  border-top: 3px solid #005b9a;
+  white-space: nowrap;
 }
 
 .timeline-item:hover .timeline-content,
 .timeline-item:focus-within .timeline-content {
-  width: calc(100% - 92px);
+  width: 200px;
   padding: 6px 14px;
   opacity: 1;
 }
@@ -162,12 +187,16 @@ header p {
     padding-top: 40px;
   }
 
+  .timeline {
+    min-height: 250px;
+  }
+
   .timeline::before {
-    left: 36px;
+    top: 50%;
   }
 
   .timeline-item {
-    height: 150px;
+    width: 150px;
   }
 
   .year {
@@ -177,12 +206,12 @@ header p {
   }
 
   .timeline-content {
-    left: 84px;
+    width: 0;
   }
 
   .timeline-item:hover .timeline-content,
   .timeline-item:focus-within .timeline-content {
-    width: calc(100% - 84px);
+    width: 180px;
     padding: 5px 10px;
   }
 }
