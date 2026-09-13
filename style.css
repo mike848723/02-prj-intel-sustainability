@@ -84,7 +84,7 @@ header p {
 
 .timeline-item {
   position: relative;
-  height: 200px;
+  height: 150px;
   margin-bottom: 0;
   padding: 0;
 }
@@ -167,7 +167,7 @@ header p {
   }
 
   .timeline-item {
-    height: 200px;
+    height: 150px;
   }
 
   .year {
