@@ -140,24 +140,26 @@ header p {
 }
 
 .timeline-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: fixed;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   padding: 0;
-  margin-top: 8px;
   overflow: hidden;
   opacity: 0;
   transition: width 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
   background: white;
-  border-top: 3px solid #005b9a;
-  white-space: nowrap;
+  border: 2px solid #005b9a;
+  z-index: 15;
+  max-width: 90%;
 }
 
 .timeline-item:hover .timeline-content,
 .timeline-item:focus-within .timeline-content {
-  width: 200px;
-  padding: 6px 14px;
+  width: 600px;
+  max-width: 85%;
+  padding: 8px 16px;
   opacity: 1;
 }
 
