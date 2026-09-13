@@ -149,22 +149,21 @@ header p {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 0;
-  padding: 0;
+  width: 600px;
+  max-width: 85%;
+  padding: 8px 16px;
   overflow: hidden;
   opacity: 0;
-  transition: width 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
+  transition: opacity 0.25s ease;
   background: transparent;
   z-index: 15;
-  max-width: 90%;
+  pointer-events: none;
 }
 
 .timeline-item:hover .timeline-content,
 .timeline-item:focus-within .timeline-content {
-  width: 600px;
-  max-width: 85%;
-  padding: 8px 16px;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .timeline-content h3 {
