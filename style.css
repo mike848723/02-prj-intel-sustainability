@@ -84,18 +84,18 @@ header p {
 
 .timeline-item {
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  min-height: 20px;
+  height: 200px;
   margin-bottom: 0;
-  padding: 8px 0;
+  padding: 0;
 }
 
 /* Each year is the cursor target that reveals its matching content. */
 .year {
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
   width: 80px;
   padding: 6px 10px;
   border: 2px solid #005b9a;
@@ -116,8 +116,11 @@ header p {
 }
 
 .timeline-content {
+  position: absolute;
+  top: 50%;
+  left: 92px;
+  transform: translateY(-50%);
   width: 0;
-  margin-left: 12px;
   padding: 0;
   overflow: hidden;
   opacity: 0;
@@ -163,15 +166,23 @@ header p {
     left: 36px;
   }
 
+  .timeline-item {
+    height: 200px;
+  }
+
   .year {
     width: 72px;
     padding: 5px 8px;
     font-size: 0.85rem;
   }
 
+  .timeline-content {
+    left: 84px;
+  }
+
   .timeline-item:hover .timeline-content,
   .timeline-item:focus-within .timeline-content {
-    width: calc(100% - 80px);
+    width: calc(100% - 84px);
     padding: 5px 10px;
   }
 }
