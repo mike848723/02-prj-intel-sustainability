@@ -97,8 +97,8 @@ header p {
 .timeline::before {
   position: absolute;
   left: 0;
-  right: 0;
   top: 50%;
+  width: 100%;
   height: 3px;
   content: "";
   background: #8bc5e8;
