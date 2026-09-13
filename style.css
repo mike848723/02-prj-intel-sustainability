@@ -49,7 +49,6 @@ header p {
   max-width: 900px;
   margin: 0 auto;
   padding: 56px 20px 80px;
-  overflow: hidden;
 }
 
 .timeline-title {
@@ -68,13 +67,9 @@ header p {
 /* The line runs down the page beside every year. */
 .timeline {
   position: relative;
-  width: calc(100% + 400px);
-  min-height: 1350px;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 12px 0;
-  overflow-x: auto;
-  overflow-y: visible;
-  scrollbar-width: thin;
-  scrollbar-color: #005b9a #e0e0e0;
 }
 
 .timeline::before {
@@ -85,24 +80,6 @@ header p {
   width: 3px;
   content: "";
   background: #8bc5e8;
-}
-
-/* Custom scrollbar styling for webkit browsers */
-.timeline::-webkit-scrollbar {
-  height: 8px;
-}
-
-.timeline::-webkit-scrollbar-track {
-  background: #e0e0e0;
-}
-
-.timeline::-webkit-scrollbar-thumb {
-  background: #005b9a;
-  border-radius: 4px;
-}
-
-.timeline::-webkit-scrollbar-thumb:hover {
-  background: #003d6b;
 }
 
 .timeline-item {
