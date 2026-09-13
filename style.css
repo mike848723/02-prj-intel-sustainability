@@ -9,6 +9,8 @@ body {
   background: #f4f8fc;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  direction: rtl;
+  overflow-y: scroll;
 }
 
 header {
@@ -16,6 +18,7 @@ header {
   color: white;
   text-align: center;
   background: #005b9a;
+  direction: ltr;
 }
 
 header > div {
@@ -48,7 +51,8 @@ header p {
 .timeline-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 56px 20px 80px;
+  padding: 56px 20px 160px;
+  direction: ltr;
 }
 
 .timeline-title {
@@ -75,6 +79,7 @@ header p {
   scrollbar-width: thin;
   scrollbar-color: #005b9a #e0e0e0;
   min-height: 250px;
+  direction: ltr;
 }
 
 .timeline::-webkit-scrollbar {
