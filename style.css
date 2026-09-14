@@ -15,10 +15,11 @@ body {
 
 header {
   padding: 56px 20px 48px;
-  color: #17233c;
+  color: white;
   text-align: center;
-  border: 6px solid #005b9a;
-  background: linear-gradient(135deg, #eaf7ff, #b9e0f7);
+  background-image: url("img/1.jpg");
+  background-position: center;
+  background-size: cover;
   direction: ltr;
 }
 
