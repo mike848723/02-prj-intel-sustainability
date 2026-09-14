@@ -17,11 +17,9 @@ header {
   padding: 56px 20px 48px;
   color: white;
   text-align: center;
-  background-image: url("img/1.jpg");
+  background-image: url("img/2.jpg");
   background-position: center;
-  background-size: 80% auto;
-  background-repeat: no-repeat;
-  background-color: #005b9a;
+  background-size: cover;
   direction: ltr;
 }
 
