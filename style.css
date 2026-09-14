@@ -51,10 +51,25 @@ header p {
 }
 
 .timeline-section {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
   padding: 56px 20px 390px;
   direction: ltr;
+}
+
+.timeline-section::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: 390px;
+  content: "";
+  background-image: url("img/1.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 .timeline-title {
@@ -166,19 +181,6 @@ header p {
 .timeline-item:focus-within .timeline-content {
   opacity: 1;
   pointer-events: auto;
-}
-
-.timeline-content::after {
-  position: absolute;
-  bottom: -60px;
-  left: 50%;
-  width: 100vw;
-  height: 60px;
-  content: "";
-  background-image: url("img/1.jpg");
-  background-position: center;
-  background-size: cover;
-  transform: translateX(-50%);
 }
 
 .timeline-content h3 {
