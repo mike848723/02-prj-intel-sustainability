@@ -15,9 +15,10 @@ body {
 
 header {
   padding: 56px 20px 48px;
-  color: white;
+  color: #17233c;
   text-align: center;
-  background: #005b9a;
+  border: 6px solid #005b9a;
+  background: linear-gradient(135deg, #eaf7ff, #b9e0f7);
   direction: ltr;
 }
 
