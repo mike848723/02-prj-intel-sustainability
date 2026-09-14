@@ -18,7 +18,7 @@ header {
   color: white;
   text-align: center;
   background-image: url("img/1.jpg");
-  background-position: center;
+  background-position: right center;
   background-size: cover;
   direction: ltr;
 }
