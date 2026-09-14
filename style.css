@@ -53,7 +53,7 @@ header p {
 .timeline-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 56px 20px 330px;
+  padding: 56px 20px 390px;
   direction: ltr;
 }
 
@@ -148,13 +148,13 @@ header p {
 
 .timeline-content {
   position: fixed;
-  bottom: 50px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: 600px;
   max-width: 85%;
   padding: 8px 16px;
-  overflow: hidden;
+  overflow: visible;
   opacity: 0;
   transition: opacity 0.25s ease;
   background: transparent;
@@ -166,6 +166,19 @@ header p {
 .timeline-item:focus-within .timeline-content {
   opacity: 1;
   pointer-events: auto;
+}
+
+.timeline-content::after {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  width: 100vw;
+  height: 60px;
+  content: "";
+  background-image: url("img/1.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: translateX(-50%);
 }
 
 .timeline-content h3 {
