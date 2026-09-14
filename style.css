@@ -52,6 +52,7 @@ header p {
 
 .timeline-section {
   position: relative;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 56px 20px 390px;
@@ -178,6 +179,13 @@ header p {
   pointer-events: none;
 }
 
+/* Keep article images inside the content card on every screen size. */
+.timeline-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .timeline-item:hover .timeline-content,
 .timeline-item:focus-within .timeline-content {
   opacity: 1;
@@ -203,7 +211,17 @@ header p {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  header p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .timeline-instruction {
+    margin-bottom: 28px;
   }
 
   .timeline-section {
